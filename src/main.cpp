@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
 #define LED_ESP 2
-#define RLY1 14
-#define RLY2 16
-#define RLY3 13
-#define RLY4 12
+#define RLY1 16
+#define RLY2 14
+#define RLY3 12
+#define RLY4 13
 
 const int relayPins[] = {RLY1, RLY2, RLY3, RLY4};
 const int numRelays = sizeof(relayPins) / sizeof(relayPins[0]);
@@ -20,13 +20,13 @@ void setup() {
 }
 
 void loop() {
+  digitalWrite(LED_ESP, HIGH);  // Nyalakan LED saat RLY1 aktif
   for (int i = 0; i < numRelays; i++) {
-    digitalWrite(LED_ESP, HIGH);  // Nyalakan LED saat relay aktif
     digitalWrite(relayPins[i], HIGH);  // Nyalakan relay
     delay(delayTime);
 
     digitalWrite(relayPins[i], LOW);  // Matikan relay
-    digitalWrite(LED_ESP, LOW);  // Matikan LED saat relay mati
-    delay(delayTime);
   }
+  digitalWrite(LED_ESP, LOW);  // Matikan LED setelah RLY4 mati
+  delay(delayTime);
 }

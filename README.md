@@ -4,9 +4,9 @@
 ## Cara download dengan Serial USB biasa
 ![](https://github.com/hwthinker/esp8266-relay4ch-AC/blob/main/picture/3.png)
 - Pasang serial USB TTL dengan ketentuan: 
-   - TX -> RX USB Serial (Kabel Putih)
-   - RX -> TX USB Serial (Kabel Hijau)
-   - GND -> GND USB Serial (Kabel Hitam)
+   - TX Board-> RX USB Serial (Kabel Putih)
+   - RX Board-> TX USB Serial (Kabel Hijau)
+   - GND Board-> GND USB Serial (Kabel Hitam)
 - Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
 - jumper IO0 ke ground 
 - klik (tekan dan lepas) tombol rst dan pastikan  IO0 masih di ground

@@ -8,22 +8,22 @@
    - RX -> TX USB Serial (Kabel Hijau)
    - GND -> GND USB Serial (Kabel Hitam)
 - Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
-- Tekan dan tahan tombol IO0 
-- klik (tekan dan lepas) tombol EN dan pastikan  tombol IO0 masih di tekan
+- jumper IO0 ke ground 
+- klik (tekan dan lepas) tombol rst dan pastikan  IO0 masih di ground
 - Lepas tombol IO0
 - Download program dan tunggu sampai selesai
-- klik tombol EN untuk run-program (langkah ini penting agar firmware baru dijalankan)
+- klik tombol rst untuk run-program (langkah ini penting agar firmware baru dijalankan)
 - ulang langkah awal bila melakukan download ulang lagi
 
 
 ## Cara download dengan Serial USB auto Download
 ![](https://github.com/hwthinker/esp8266-relay4ch-AC/blob/main/picture/2.png)
 - Pasang serial USB TTL dengan ketentuan:
-    - RX -> RX USB Serial  
-    - TX -> TX USB Serial 
-    - GND -> GND USB Serial  
-    - IO0 -> IO# USB Serial 
-    - EN -> EN# USB Serial
+    - RX board -> RX USB Serial  
+    - TX board-> TX USB Serial 
+    - GND board -> GND USB Serial  
+    - IO0 board -> IO# USB Serial 
+    - EN board -> EN# USB Serial
 - Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
 - Download program dan tunggu sampai selesai
 

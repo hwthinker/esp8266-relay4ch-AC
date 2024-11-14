@@ -2,40 +2,7 @@
 
 ![1](./assets/1.png)
 
-## Cara download dengan Serial USB biasa
-
-![3](./assets/3.png)
-- Pasang serial USB TTL dengan ketentuan: 
-   - TX Board-> RX USB Serial (Kabel Putih)
-   - RX Board-> TX USB Serial (Kabel Hijau)
-   - GND Board-> GND USB Serial (Kabel Hitam)
-- Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
-- jumper IO0 ke ground 
-- klik (tekan dan lepas) tombol rst dan pastikan  IO0 masih di ground
-- Lepas tombol IO0
-- Download program dan tunggu sampai selesai
-- klik tombol rst untuk run-program (langkah ini penting agar firmware baru dijalankan)
-- ulang langkah awal bila melakukan download ulang lagi
-
-
-## Cara download dengan Serial USB auto Download
-![2](./assets/2.png)
-
-- Pasang serial USB TTL dengan ketentuan:
-    - RX board -> RX USB Serial  
-    - TX board-> TX USB Serial 
-    - GND board -> GND USB Serial  
-    - IO0 board -> IO# USB Serial 
-    - EN board -> EN# USB Serial
-- Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
-- Download program dan tunggu sampai selesai
-
-Warning:❗⚠️
-Aktifkan daya untuk menghidupkan alat hanya dengan satu jenis sumber daya, bisa 9VDC, 5VDC, atau AC220V. Jangan menghubungkan beberapa sumber daya secara bersamaan, karena akan menyebabkan kerusakan pada alat.
-
-
-
-### Persiapan di Arduino
+## Persiapan di Arduino
 
 1. **Instal Arduino IDE**: Jika belum menginstal, unduh dan instal Arduino IDE dari website resmi Arduino.
 
@@ -72,7 +39,7 @@ Aktifkan daya untuk menghidupkan alat hanya dengan satu jenis sumber daya, bisa 
 
 
 
-### Testing Relay
+## Testing Relay
 
 1. **Buat Sketsa Baru**:
 
@@ -120,13 +87,43 @@ Aktifkan daya untuk menghidupkan alat hanya dengan satu jenis sumber daya, bisa 
 
    - Simpan sketsa dengan nama seperti `testing-relay.ino`.
 
-### Unggah Program ke ESP8266
 
-1. **Hubungkan ESP8266 ke Komputer** dan pastikan Arduino IDE mengenali port yang tepat di menu **Tools** → **Port**.
-2. Klik tombol **Upload** (ikon panah kanan) di Arduino IDE. Tunggu hingga proses kompilasi dan unggah selesai.
-3. Jika proses unggah sukses, LED internal pada ESP8266 akan berkedip setiap 1 detik.
 
-### Troubleshooting
+## Cara download dengan Serial USB biasa
+
+![3](./assets/3.png)
+
+- Pasang serial USB TTL dengan ketentuan: 
+  - TX Board-> RX USB Serial (Kabel Putih)
+  - RX Board-> TX USB Serial (Kabel Hijau)
+  - GND Board-> GND USB Serial (Kabel Hitam)
+- Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
+- jumper IO0 ke ground 
+- klik (tekan dan lepas) tombol rst dan pastikan  IO0 masih di ground
+- Lepas tombol IO0
+- Download program dan tunggu sampai selesai
+- klik tombol rst untuk run-program (langkah ini penting agar firmware baru dijalankan)
+- ulang langkah awal bila melakukan download ulang lagi
+
+
+
+## Cara download dengan Serial USB auto Download
+
+![2](./assets/2.png)
+
+- Pasang serial USB TTL dengan ketentuan:
+  - RX board -> RX USB Serial  
+  - TX board-> TX USB Serial 
+  - GND board -> GND USB Serial  
+  - IO0 board -> IO# USB Serial 
+  - EN board -> EN# USB Serial
+- Pastikan supply AC220V  dihubungkan 2 pin Terminal block(pin N dan L)
+- Download program dan tunggu sampai selesai
+
+Warning:❗⚠️
+Aktifkan daya untuk menghidupkan alat hanya dengan satu jenis sumber daya, bisa 9VDC, 5VDC, atau AC220V. Jangan menghubungkan beberapa sumber daya secara bersamaan, karena akan menyebabkan kerusakan pada alat.
+
+## Troubleshooting
 
 - Jika terjadi kesalahan saat unggah, coba ganti **Upload Speed** di **Tools** → **Upload Speed** menjadi nilai yang lebih rendah, seperti `115200`.
 - Pastikan Anda menggunakan kabel USB yang mendukung transfer data, bukan hanya kabel pengisian daya.

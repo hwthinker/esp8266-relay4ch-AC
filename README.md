@@ -2,40 +2,59 @@
 
 ![1](./assets/1.png)
 
-## Persiapan di Arduino
+## Cara install plugin Arduino IDE
 
-1. **Instal Arduino IDE**: Jika belum menginstal, unduh dan instal Arduino IDE dari website resmi Arduino.
+### Langkah 1: Buka Arduino IDE
 
-2. **Tambahkan Board ESP8266 ke Arduino IDE**:
+1. Buka aplikasi Arduino IDE di komputer Anda. Jika belum ada, unduh dan instal Arduino IDE dari situs resmi Arduino di https://www.arduino.cc/en/software. disarankan menggunakan arduino ide versi 2
 
-   - Buka **Arduino IDE**.
+### Langkah 2: Tambahkan URL Board Manager untuk ESP8266
 
-   - Pergi ke menu **File** → **Preferences**.
+2. Di Arduino IDE, buka **File** > **Preferences**.
 
-   - Di bagian 
+   ![image-20241218161205191](./assets/image-20241218161205191.png)
 
-     Additional Board Manager URLs
+3. Pada bagian  Additional Boards Manager URLs, tambahkan URL berikut:
 
-     , masukkan URL berikut:
+```
+https://arduino.esp8266.com/stable/package_esp8266com_index.json
+```
 
-     ```bash
-     http://arduino.esp8266.com/stable/package_esp8266com_index.json
-     ```
+4. Jika sebelumnya Anda sudah memiliki URL lain di sana, pisahkan URL ini dengan tanda koma atau baris baru.
 
-   - Klik **OK**.
+![image-20241219130329972](./assets/image-20241219130329972.png)
 
-   - Buka menu **Tools** → **Board** → **Boards Manager**.
+### Langkah 3: Buka Boards Manager
 
-   - Cari **ESP8266** dan instal paket yang ditampilkan.
+1. Buka **Tools** > **Board** > **Boards Manager**.
 
-3. **Pilih Board ESP8266**:
+![image-20241219143050427](./assets/image-20241219143050427.png)
 
-   - Pergi ke menu **Tools** → **Board**, lalu pilih board yang sesuai, seperti **NodeMCU 1.0 (ESP-12E Module)** atau board ESP8266 yang Anda gunakan.
+2. Di kotak pencarian, ketik **ESP8266**
 
-4. **Pilih Port yang Tepat**:
+### Langkah 4: Instal Board ESP8266
 
-   - Sambungkan ESP8266 ke komputer menggunakan kabel USB.
-   - Pergi ke menu **Tools** → **Port** dan pilih port yang sesuai dengan ESP8266 Anda.
+1. Temukan **ESP8266 by Espressif Systems** di daftar, kemudian klik **Install**.
+
+![image-20241219143234583](./assets/image-20241219143234583.png)
+
+2. Tunggu hingga proses instalasi selesai.
+
+### Langkah 5: Pilih Board ESP8266
+
+1. Setelah instalasi selesai, Anda dapat memilih board ESP8266.
+2. Buka **Tools** > **Board**, dan gulir ke bawah untuk menemukan berbagai jenis board ESP8266 yang telah diinstal. Pilih board yang sesuai, misalnya **Nodemcu 1.0 (ESP-12E Module)** 
+
+![image-20241219182253982](./assets/image-20241219182253982.png)
+
+3. hasilnya kurang lebih seperti ini
+
+![image-20241219182543854](./assets/image-20241219182543854.png)
+
+### Langkah 6: Pilih Port
+
+1. Sambungkan board esp8266 ke komputer Anda menggunakan kabel USB.
+2. Di **Tools** > **Port**, pilih port yang sesuai dengan esp8266 Anda.
 
 
 
@@ -127,3 +146,9 @@ Aktifkan daya untuk menghidupkan alat hanya dengan satu jenis sumber daya, bisa 
 
 - Jika terjadi kesalahan saat unggah, coba ganti **Upload Speed** di **Tools** → **Upload Speed** menjadi nilai yang lebih rendah, seperti `115200`.
 - Pastikan Anda menggunakan kabel USB yang mendukung transfer data, bukan hanya kabel pengisian daya.
+
+> [!NOTE]
+> Untuk serial disarankan menggunakan serial auto download
+>
+> - https://tokopedia.link/Ml3NIixX6Mb atau
+> - https://shopee.co.id/product/21375728/27056587756/ 
